@@ -12,13 +12,57 @@ The ANSI standard language for dealing with relational databases is call Structu
 Our NFL database contains information about the first week of games in the 2016 NFL season. Initially it was structured:
 
 
-| Team | Quarterback | Conference | Division | Stadium | City | College | Attendence | Score | Total Yards | Turn Overs | 1st Downs |
-|------|-------------|------------|----------|---------|------|---------|------------|-------|-------------|------------|-----------|
-|      |             |            |          |         |      |         |            |       |             |            |           |
-|      |             |            |          |         |      |         |            |       |             |            |           |
-|      |             |            |          |         |      |         |            |       |             |            |           |
+|Game| Team | Quarterback | Conference | Division | Stadium | City | College | Attendence | Score | Total Yards | Turn Overs | 1st Downs |Home/Away|
+|-----|------|-------------|------------|----------|---------|------|---------|------------|-------|-------------|------------|-----------|---------|
+|    |      |             |            |          |         |      |         |            |       |             |            |           |         |    |
 
-Our table is almost in 1NF, or first normal form. First normal is defined as (list defintion)
 
-As we can see, we are merely missing a primary key. 
-_Quarterback_, _
+Our table is almost in 1NF, or first normal form. First normal is defined as being a relation and having a primary key. A relation is defined:
+* Rows contain data about an entity.
+* Columns contain data about atributes of the entities.
+* All entries in a column are of the same kind.
+* Each column has a unique name.
+* Cells of the table hold a single value.
+* The order of the columns is unimportant.
+* The order of the rows is unimportant.
+* No two rows are identical.
+
+We are merely missing a primary key. 
+_GameID_, _QBName_, TeamName, Conference, Division, Stadium, City, College, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away
+
+Next, we make it second normal, first we list the dependencies:
+
+* GameID -> TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away
+* QBName ->  College
+* TeamName -> Conference,Division
+* Stadium -> City
+
+Due to the fact we have a composite key, we see that we have non key attributes that can be determined by part of the primary key, thus failing the 2NF requirements. So we restructure:
+
+GAMES( ___GameID___ , TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+QUARTERBACKS( ___QBName___ , College )
+
+In order to make it 3NF, it must be 2NF and no non primary attributes are dependent are any other non primary attributes. In order to correct this we restructure again:
+
+GAMES( ___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+QUARTERBACKS( ___QBName___ , College )
+TEAMS( ___TeamName___, Conference, Division)
+LOCATONS( ___Stadium___ , City)
+
+Finally, in order to make it Boyce-Codd Normal Form. Boyce-Codd is needed for normalisation due to anomalies still being present in 3NF because of functional dependencies.
+
+GAMES( ___GameID___ , *HomeTeam*, *AwayTeam*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs)
+GAMESTATISTICS( *GameID*, *QBName*, *TeamID*, Score, Total Yards, Turn Overs, 1st Downs)
+QUARTERBACKS( ___QBName___ , College )
+TEAMS( ___TeamName___, Conference, Division)
+LOCATONS( ___Stadium___ , City)
+
+Finally we create our ERD to visualise our database.
+
+INSERT ERD
+
+### Creating the Database
+We have our ERD, the next step is to create the database. This is done with Data Definition Language or DDL. Our database is created here (link here)
+
+
+
