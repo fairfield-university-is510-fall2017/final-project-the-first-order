@@ -44,7 +44,7 @@ QUARTERBACKS( ___QBName___ , College )
 
 In order to make it 3NF, it must be 2NF and have no non primary attributes that are dependent on any other non primary attributes. In order to correct this, we restructure again:
 
-GAMES( ___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+GAMES( <u>GID</u>___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
 QUARTERBACKS( ___QBName___ , College )
 TEAMS( ___TeamName___, Conference, Division)
 LOCATONS( ___Stadium___ , City)
