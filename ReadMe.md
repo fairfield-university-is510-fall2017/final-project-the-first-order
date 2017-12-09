@@ -62,7 +62,26 @@ Finally we create our ERD to visualise our database.
 ![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Football_ERD.PNG)
 
 ### Creating the Database
-We have our ERD, the next step is to create the database. This is done with Data Definition Language or DDL. Our database is created here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
+We have our ERD, the next step is to create the database. This is done with *Data Definition Language* or DDL. Our database is created here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
+
+DDL is a language used to describe the structure of a database, specifically, it is used to create, modify, and drop database structures. 
+
+In order to create the tables for our database, we use Create Table Statements, allowing us to give our tables names, as well as define all of the columns and indexes, meaning create column names along with their data types and constraints. When determining the datatype to declare for each column, we think about the nature of the data and it's intended use. Once the data types are determined, we place constraints on the columns to signify the following:
+* Does the column accept NULL values?
+* Must all column values be unique?
+* Should a value be assigned to the attribute when a new row is added?
+* Do we want to use a serial number generator to populate the column?
+
+Below is a sample of DDL language used to create our NFL database:
+<insert SQL code>
+
+*Data Manipulation Language*, or DML, is a language used to describe the processing of a database. SQL DML statements  are used to query, insert, modify, and delete data. Now that our database is structured, we will use DML to insert the data into our newly created tables.
+
+In order to add the data into the tables, we utlize the Insert Into command, along with a select statement:
+<insert SQL code>
+  
+With our NFL database structured and populated, we are ready to merge additional data sets. 
+
 
 
 
