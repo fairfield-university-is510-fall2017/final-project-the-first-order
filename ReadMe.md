@@ -76,7 +76,9 @@ Below is a sample of DDL language used to create our NFL database:
 <insert SQL code>
 
 ### Inserting Values to the Database
-*Data Manipulation Language*, or DML, is a language used to describe the processing of a database. SQL DML statements  are used to query, insert, modify, and delete data. Now that our database is structured, we will use DML to insert the data into our newly created tables.
+*Data Manipulation Language*, or DML, is a language used to describe the processing of a database. Our database is populated here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DML.ipynb)
+
+SQL DML statements  are used to query, insert, modify, and delete data. Now that our database is structured, we will use DML to insert the data into our newly created tables.
 
 In order to add the data into the tables, we utlize the Insert Into command, along with a select statement:
 <insert SQL code>
