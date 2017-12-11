@@ -85,6 +85,20 @@ In order to add the data into the tables, we utlize the Insert Into command, alo
   
 With our NFL database structured and populated, we are ready to merge additional data sets. 
 
+### NFL Analysis
+
+![Avg Yards Per Play]( https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Yards_Per_Play.png “Avg Yards Per Play”)
+
+![Total Turnovers by Team]( https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Total_Turnovers_by_Team.png “Total Turnovers by Team”)
+
+![Week 1 Yards Gained by Division and Conference]( https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Total_W1_Yards_by_Division_and_Conf.png “Week 1 Yards Gained by Division and Conference”)
+
+![ Week 1 Yards Gained]( https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Total_W1_Yards_Per_Team.png “Week 1 Yards Gained”)
+
+![Average Points Scored]( https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Points_Scored_by_Division_and_Conf.png “Average Points Scored”)
+
+
+
 
 
 
