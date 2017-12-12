@@ -63,7 +63,7 @@ LOCATONS( <u>*SID*</u>, Stadium , City)
 
 Finally we create our ERD to visualise our database.
 
-![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Football_ERD.PNG)
+![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Football_ERD.PNG)
 
 ### Creating the Database
 We have our ERD, the next step is to create the database. This is done with *Data Definition Language* or DDL. Our database is created [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
@@ -87,27 +87,27 @@ In order to add the data into the tables, we utlize the Insert Into command, alo
 With our NFL database structured and populated, we are ready to merge additional data sets and then perform an analysis on the merged data. The merge and analysis is performed [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Analysis.ipynb)
 
 #### Average Yards Per Play by Team
-![Avg Yards Per Play](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Yards_Per_Play.png) 
+![Avg Yards Per Play](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Avg_Yards_Per_Play.png) 
 
 As we can see, Atlanta Falcons have the highest yard gainage per play in the 2016 season, followed by New England Patriots. Neither the Eagles or the Steelers made the top three.
 
 #### Total 2016 Turnovers by Team
-![Total Turnovers by Team](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Total_Turnovers_by_Team.png) 
+![Total Turnovers by Team](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Total_Turnovers_by_Team.png) 
 
 The **Los Angeles Chargers** had the *greatest* number of turnovers in 2016, followed by the **New York Jets**. The **Atlanta Falcons** and **New England Patriots** were tied for *least* number of turnovers in the 2016 season.
 
 #### Average Points Scored by Division
-![Average Points Scored](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Points_Scored_by_Division_and_Conf.png) 
+![Average Points Scored](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Avg_Points_Scored_by_Division_and_Conf.png) 
 
 While the **West Division** leads the **AFC Conference** in average points scored for the 2016 season, the **South Division** leads the **NFC Conference**.
 
 #### Average Total Week 1 Yards by Division
-![Week 1 Yards Gained by Division and Conference](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Total_W1_Yards_by_Division_and_Conf.png) 
+![Week 1 Yards Gained by Division and Conference](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Avg_Total_W1_Yards_by_Division_and_Conf.png) 
 
 The same Divisions in each conference lead in terms of average yards gained in week one as did in average points scored for the total season. (With **West** Leading in the **AFC**, and **South** Leading in the **NFC**.)
 
 #### Average Total Week 1 Yards by Team
-![ Week 1 Yards Gained](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Total_W1_Yards_Per_Team.png) 
+![ Week 1 Yards Gained](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Avg_Total_W1_Yards_Per_Team.png) 
 
 During the first week of the 2016 season, **New Orleans Saints** gained the greatest number of yards.
 
