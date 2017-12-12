@@ -63,7 +63,7 @@ LOCATONS( <u>*SID*</u>, Stadium , City)
 
 Finally we create our ERD to visualise our database.
 
-![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Football_ERD_V2.PNG)
+![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Football_ERD.PNG)
 
 ### Creating the Database
 We have our ERD, the next step is to create the database. This is done with *Data Definition Language* or DDL. Our database is created [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
