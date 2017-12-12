@@ -51,7 +51,7 @@ In order to make it 3NF, it must be 2NF and have no non primary attributes that 
 
 GAMES( <u>GameID</u> , *TeamID*, *SID*, Attendance, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
 
-QUARTERBACKS( <u>QBID</u> , College )
+QUARTERBACKS( <u>QBID</u> ,QBName, College )
 
 TEAMS( <u>*TID*</u>, TeamName, Conference, Division)
 
@@ -63,7 +63,7 @@ GAMES( <u>*GameID*</u> , *HomeTeamID*, *AwayTeamID*, *Stadium*, Attendance, Scor
 
 GAMESTATISTICS( *GameID*, *QBName*, *TeamID*, Score, Total Yards, Turn Overs, 1st Downs)  
 
-QUARTERBACKS( <u>*QBID*</u>, College )
+QUARTERBACKS( <u>*QBID*</u>, QBName,College )
 
 TEAMS( <u>*TID*</u>, TeamName, Conference, Division)
 
