@@ -1,8 +1,8 @@
 # The First Order
-## A New Hobby for our Troopers - NFL
+## A New Hobby for our Supreme Commander - NFL
 
 ### Relational Databases and SQL
-One of the most important parts of creating a new database is the planning. It is easy to change a recipe,  but harder to remove the apple from an apple pie. This means that it is comparatively easier to make changes to a database in the design stage of a project, as opposed to making changes to the structure of a database after it has been created. The purpose of this report is to create a database containing information about National Football League (NFL) match-ups, followed by merging in another NFL data set that is not part of the original database. To finish, some simple analysis will then be conducted on the newly merged database. This merging is underway to appease Supreme Leader Snoke, as he has grown bored with his existing databases and wishes to have a new one on which to conduct analysis.
+One of the most important parts of creating a new database is the planning. It is easy to change a recipe,  but harder to remove the apple from an apple pie. This means that it is comparatively easier to make changes to a database in the design stage of a project, as opposed to making changes to the structure of a database after it has been created. The purpose of this report is to create a database containing information about National Football League of the planet Earth. We will take everyteam based on this planet located beyond the outer rim. For some reason they all appear to be located within the area referred to as the United States of America. We will be examining data about NFL match-ups, followed by merging in another NFL data set that is not part of the original database in order to examine season statistics. To finish, some simple analysis will then be conducted on the newly merged database. It is hoped that this will provide a new hobby for Supreme Leader Snoke, as he has grown bored with his existing databases and pastimes ever since the destruction of Starkiller base.
 
 The database model we will be examining in this report is the Relational Database Model, also known as relational database management system (RDMS). It is based on the relational model invented by Edgar F. Codd, of IBM's San Jose Research Laboratory. Most databases in widespread use are based on the relational database model. Codd now has the definition of a "normalized" model named after him, along with a man called Raymond Boyce, who augmented Codd's inital work to create the Boyce - Codd Normal Form in 1974. We will discuss normalization later in this report.
 
@@ -110,6 +110,9 @@ The same Divisions in each conference lead in terms of average yards gained in w
 ![ Week 1 Yards Gained](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Charts/Avg_Total_W1_Yards_Per_Team.png) 
 
 During the first week of the 2016 season, **New Orleans Saints** gained the greatest number of yards.
+
+### Conclusion
+In conlusion, after some initial analysis, it is believed that the NFL will not be a good sport for our Supreme Leader. The season is too short, and while when the ball is in play it does provide entertainment, the continual interuptions by non space worth flying machines, or wheeled speeders may cause the Supreme Leader to build a new Starkiller base merely to destroy the planet. Also while the best team at present could be considered to be the New England Patriots, not even Snoke would be willing to support them.
 
 
 
