@@ -12,7 +12,7 @@ The American National Standards Institute (ANSI) standard language for dealing w
 Our NFL database contains information about the first week of games in the 2016 NFL season. Initially, it was structured:
 
 
-|Game| Team | Quarterback | Conference | Division | Stadium | City | College | Attendence | Score | Total Yards | Turn Overs | 1st Downs |Home/Away|
+|GameID| Team | Quarterback | Conference | Division | Stadium | City | College | Attendence | Score | Total Yards | Turn Overs | 1st Downs |Home/Away|
 |-----|------|-------------|------------|----------|---------|------|---------|------------|-------|-------------|------------|-----------|---------|
 |    |      |             |            |          |         |      |         |            |       |             |            |           |         |    |
 
@@ -28,7 +28,7 @@ Our table is almost in 1NF, or first normal form. First normal is defined as bei
 * No two rows are identical.
 
 We are merely missing a primary key. 
-_GameID_, _QBName_, TeamName, Conference, Division, Stadium, City, College, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away
+<u>GameID</u>, <u>QBName</u>, TeamName, Conference, Division, Stadium, City, College, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away
 
 Next, we convert the data set to second normal, starting with a list of dependencies:
 
@@ -39,30 +39,34 @@ Next, we convert the data set to second normal, starting with a list of dependen
 
 Due to the fact we have a composite key, we see that we have non key attributes that can be determined by part of the primary key, thus failing the 2NF requirements. So we restructure:
 
-GAMES( ___GameID___, TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
-QUARTERBACKS( <u>QBID</u>,___QBName___ , College )
+GAMES( <u>GameID</u>, TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+QUARTERBACKS( <u>QBID</u>, QBName , College )
 
 In order to make it 3NF, it must be 2NF and have no non primary attributes that are dependent on any other non primary attributes. In order to correct this, we restructure again:
 
-GAMES( ___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
-QUARTERBACKS( ___QBName___ , College )
-TEAMS( ___TeamName___, Conference, Division)
-LOCATONS( ___Stadium___ , City)
+GAMES( <u>GameID</u> , *TeamID*, *SID*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+QUARTERBACKS( <u>QBID</u> , College )
+TEAMS( <u>*TID*</u>, TeamName, Conference, Division)
+LOCATONS( <u>*SID*</u>. Stadium , City)
 
 Finally, we take steps to transition to Boyce-Codd Normal Form. Boyce-Codd is needed for normalization due to anomalies still being present in 3NF because of functional dependencies.
 
-GAMES( ___GameID___ , *HomeTeam*, *AwayTeam*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs)
+GAMES( <u>*GameID*</u> , *HomeTeamID*, *AwayTeamID*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs)
+
 GAMESTATISTICS( *GameID*, *QBName*, *TeamID*, Score, Total Yards, Turn Overs, 1st Downs)
-QUARTERBACKS( ___QBName___ , College )
-TEAMS( ___TeamName___, Conference, Division)
-LOCATONS( ___Stadium___ , City)
+
+QUARTERBACKS( <u>*QBID*</u>, College )
+
+TEAMS( <u>*TID*</u>, TeamName, Conference, Division)
+
+LOCATONS( <u>*SID*</u>, Stadium , City)
 
 Finally we create our ERD to visualise our database.
 
 ![ERD](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Football_ERD.PNG)
 
 ### Creating the Database
-We have our ERD, the next step is to create the database. This is done with *Data Definition Language* or DDL. Our database is created here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
+We have our ERD, the next step is to create the database. This is done with *Data Definition Language* or DDL. Our database is created [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DDL.ipynb)
 
 DDL is a language used to describe the structure of a database, specifically, it is used to create, modify, and drop database structures. 
 
@@ -73,14 +77,14 @@ In order to create the tables for our database, we use Create Table Statements, 
 * Do we want to use a serial number generator to populate the column?
 
 ### Inserting Values to the Database
-*Data Manipulation Language*, or DML, is a language used to describe the processing of a database. Our database is populated here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DML.ipynb)
+*Data Manipulation Language*, or DML, is a language used to describe the processing of a database. Our database is populated [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/DML.ipynb)
 
 SQL DML statements  are used to query, insert, modify, and delete data. Now that our database is structured, we will use DML to insert the data into our newly created tables.
 
 In order to add the data into the tables, we utlize the Insert Into command, along with a select statement.
   
 ### NFL Analysis
-With our NFL database structured and populated, we are ready to merge additional data sets and then perform an analysis on the merged data. The merge and analysis is performed here (https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Analysis.ipynb)
+With our NFL database structured and populated, we are ready to merge additional data sets and then perform an analysis on the merged data. The merge and analysis is performed [here](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Analysis.ipynb)
 
 #### Average Yards Per Play by Team
 ![Avg Yards Per Play](https://github.com/fairfield-university-is510-fall2017/final-project-the-first-order/blob/master/Avg_Yards_Per_Play.png) 
