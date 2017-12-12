@@ -39,12 +39,12 @@ Next, we convert the data set to second normal, starting with a list of dependen
 
 Due to the fact we have a composite key, we see that we have non key attributes that can be determined by part of the primary key, thus failing the 2NF requirements. So we restructure:
 
-GAMES( <u>GID</u>, TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+GAMES( ___GameID___, TeamName, Conference, Division, Stadium, City, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
 QUARTERBACKS( <u>QBID</u>,___QBName___ , College )
 
 In order to make it 3NF, it must be 2NF and have no non primary attributes that are dependent on any other non primary attributes. In order to correct this, we restructure again:
 
-GAMES( <u>GID</u>___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
+GAMES( ___GameID___ , *TeamName*, *Stadium*, Attendence, Score, Total Yards, Turn Overs, 1st Downs, Home/Away )
 QUARTERBACKS( ___QBName___ , College )
 TEAMS( ___TeamName___, Conference, Division)
 LOCATONS( ___Stadium___ , City)
