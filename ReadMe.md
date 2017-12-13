@@ -122,3 +122,10 @@ During the first week of the 2016 season, **New Orleans Saints** gained the grea
 
 ### Conclusion
 In conlusion, after some initial analysis, it is believed that the NFL will not be a good sport for our Supreme Leader. The season is too short, and while when the ball is in play it does provide entertainment, the continual interuptions by non space worth flying machines, or wheeled speeders may cause the Supreme Leader to build a new Starkiller base merely to destroy the planet. Also while the best team at present could be considered to be the New England Patriots, not even Snoke would be willing to support them.
+
+
+### Lessons Learnt
+There were a number of lessons learnt from this project:
+* Database deisgn is a crucial part of the process. In terms of manhours, this probably took the most
+* It is easier to change the deisgn before starting the database creating as opposed to after it
+* Crafting code in excel can be easier than loading data into the database straight from the table
